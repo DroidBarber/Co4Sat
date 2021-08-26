@@ -11,7 +11,7 @@
     tools:context=".Alertes">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_1"
         android:layout_width="409dp"
         android:layout_height="561dp"
         android:background="@android:color/darker_gray"
@@ -32,18 +32,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
         app:layout_constraintVertical_bias="0.226" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Co4Sat"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.551" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
