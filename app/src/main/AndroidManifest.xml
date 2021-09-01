@@ -10,6 +10,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
 
     <uses-feature android:name="android.hardware.location.gps" />
@@ -23,6 +25,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Co4sat">
+        <activity
+            android:name=".imei"
+            android:exported="true" />
         <activity
             android:name=".http"
             android:exported="true" />
@@ -43,9 +48,6 @@
 
         <activity
             android:name=".locationSMS"
-            android:exported="true" />
-        <activity
-            android:name=".Batterie"
             android:exported="true" />
         <activity
             android:name=".DGPS"

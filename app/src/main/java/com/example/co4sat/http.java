@@ -27,7 +27,7 @@ public class http extends AppCompatActivity {
         mTextViewResult = findViewById(R.id.text_view_result);
 
         OkHttpClient client = new OkHttpClient();
-        String url = "https://co4sat.com:2000/api/tracers/trains/updateTrainPositions";
+        String url = "http://13.79.149.204:2000/api/tracers/trains/updateTrainPositions";
 
         Request request = new Request.Builder()
                 .url(url)
