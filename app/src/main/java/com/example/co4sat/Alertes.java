@@ -25,18 +25,18 @@ public class Alertes extends AppCompatActivity {
                 if(event.getAction()==MotionEvent.ACTION_DOWN)
                 {
                     // rouge
-                    button.setBackgroundImage(R.drawable.image_pressed);
+
 
                 }
                 if(event.getAction()== MotionEvent.ACTION_UP)
                 {
                     // orange
-                    button.setBackgroundImage(R.drawable.image_released);
+
                 }
                 if(event.getAction()== MotionEvent.ACTION_UP)
                 {
                     //vert
-                    button.setBackgroundImage(R.drawable.image_released);
+
                 }
                 return false;
             }
