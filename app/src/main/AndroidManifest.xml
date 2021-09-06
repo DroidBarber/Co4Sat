@@ -26,6 +26,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Co4sat">
         <activity
+            android:name=".battery"
+            android:exported="true" />
+        <activity
             android:name=".imei"
             android:exported="true" />
         <activity
