@@ -2,48 +2,43 @@ package com.example.co4sat;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 
 public class Alertes extends AppCompatActivity {
 
-    Button button_1;
+    ImageView img;
+    boolean imageDisplaying = false;
 
+
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alertes);
-        View button = findViewById(R.id.button);
 
+        img = findViewById(R.id.img);
 
-        button.setOnTouchListener(new View.OnTouchListener() {
-
+        img.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction()==MotionEvent.ACTION_DOWN)
-                {
-                    // rouge
-
-
+                if(imageDisplaying) {
+                    img.setImageResource(R.drawable.red);
+                    //code
                 }
-                if(event.getAction()== MotionEvent.ACTION_UP)
-                {
-                    // orange
-
+                if(imageDisplaying) {
+                    img.setImageResource(R.drawable.orange);
+                    //code
                 }
-                if(event.getAction()== MotionEvent.ACTION_UP)
-                {
-                    //vert
-
+                if(imageDisplaying) {
+                    img.setImageResource(R.drawable.green);
+                    //code
                 }
                 return false;
             }
         });
-
-
-
-
     }
 }
