@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -27,7 +28,7 @@ public class imei extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void buttonIMEI(View view) {
-        TelephonyManager telephonyManager = (TelephonyManager) this.getSystemService(this.TELEPHONY_SERVICE);
+        TelephonyManager telephonyManager = (TelephonyManager) this.getSystemService(TELEPHONY_SERVICE);
 
         String stringIMEI = telephonyManager.getImei();
 

@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.MotionEvent;
@@ -24,28 +27,23 @@ public class Alertes extends AppCompatActivity {
 
         img = findViewById(R.id.img);
 
-        img.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(imageDisplaying) {
-                    img.setImageResource(R.drawable.red);
-                    imageDisplaying =  false;
-                    Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                    vibrator.vibrate(1000);
-                    //code
-                }
-                if(imageDisplaying) {
-                    img.setImageResource(R.drawable.orange);
-                    imageDisplaying = true;
-                    //code
-                }
-                if(imageDisplaying){
-                    img.setImageResource(R.drawable.green);
-                    imageDisplaying = true;
-                }
+        img.setOnTouchListener((v, event) -> {
+            if(imageDisplaying) {
+                img.setImageResource(R.drawable.red);
+                imageDisplaying =  false;
+                Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                vibrator.vibrate(2000);
 
-                return false;
             }
+            if(imageDisplaying) {
+                img.setImageResource(R.drawable.orange);
+
+
+            } else{
+                img.setImageResource(R.drawable.green);
+                imageDisplaying = true;
+            }
+            return false;
         });
     }
 }

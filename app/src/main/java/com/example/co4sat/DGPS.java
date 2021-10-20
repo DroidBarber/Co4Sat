@@ -72,7 +72,6 @@ public class DGPS extends AppCompatActivity {
                 //init location
                 Location location = task.getResult();
                 if (location != null) {
-
                     try {
                         //init geocoder
                         Geocoder geocoder = new Geocoder(DGPS.this, Locale.getDefault());

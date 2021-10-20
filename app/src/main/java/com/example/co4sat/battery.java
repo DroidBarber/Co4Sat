@@ -2,6 +2,7 @@ package com.example.co4sat;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -27,6 +28,7 @@ public class battery extends AppCompatActivity {
 
         ringtone = RingtoneManager.getRingtone(getApplicationContext(), RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE));
         BroadcastReceiver broadcastReceiverBattery = new BroadcastReceiver() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onReceive(Context context, Intent intent) {
                 int integerBatteryLevel = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0);
